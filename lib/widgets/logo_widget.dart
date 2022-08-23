@@ -12,30 +12,31 @@ class LogoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(12.0),
-      child: ListView(
+      child: Column(
         children: const [
           Padding(
             padding: EdgeInsets.all(12.0),
             child: Align(
-              alignment: Alignment(0.01, 0.00),
+              alignment: Alignment.center,
               child: Text(
                 _title,
-                style: TextStyle(fontSize: 25),
+                style:
+                    TextStyle(fontSize: 25, fontFamily: 'PTSansNarrow-Regular'),
               ),
             ),
           ),
           Padding(
             padding: EdgeInsets.all(12.0),
             child: Align(
-              alignment: Alignment(0.1, 0.00),
+              alignment: Alignment.center,
               child: Text(
                 _logo,
-                style: TextStyle(fontSize: 50),
+                style: TextStyle(fontSize: 50, fontFamily: 'BebasNeue-Regular'),
               ),
             ),
           ),
           Align(
-            alignment: Alignment(0.0, 0.2),
+            alignment: Alignment.center,
             child: Text(
               _description,
               style: TextStyle(fontSize: 18),
@@ -47,7 +48,7 @@ class LogoWidget extends StatelessWidget {
             indent: 2,
           ),
           Align(
-            alignment: Alignment(0.0, 0.2),
+            alignment: Alignment.center,
             child: Text(
               _description2,
               style: TextStyle(fontSize: 18),
