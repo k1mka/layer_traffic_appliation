@@ -28,7 +28,7 @@ class _MyCustomFormWidgetState extends State<MyCustomFormWidget> {
               style: TextStyle(fontSize: 30, color: Colors.green),
             ),
             const SizedBox(
-              height: 4,
+              height: 14,
             ),
             TextFormField(
               decoration: const InputDecoration(
@@ -50,7 +50,7 @@ class _MyCustomFormWidgetState extends State<MyCustomFormWidget> {
             ),
             TextFormField(
               decoration: const InputDecoration(
-                labelText: 'Email',
+                labelText: 'Enter your phone',
                 filled: true,
                 fillColor: Colors.white,
               ),
@@ -86,11 +86,19 @@ class _MyCustomFormWidgetState extends State<MyCustomFormWidget> {
               height: 4,
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.green),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(12.0),
+                primary: Colors.green,
+              ),
               onPressed: () {
                 if (fromKey.currentState!.validate()) {}
               },
-              child: const Text('Enabled'),
+              child: const Center(
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
           ],
         ),
