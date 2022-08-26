@@ -7,32 +7,30 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: SizedBox(
-          height: MediaQuery.of(context).size.height,
-          child: DecoratedBox(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                stops: [0.10, 3, 0.5],
-                colors: [
-                  Colors.lightGreenAccent,
-                  Colors.white,
-                  Colors.lightGreenAccent,
-                ],
-              ),
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: DecoratedBox(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: [0.10, 3, 0.5],
+              colors: [
+                Colors.lightGreenAccent,
+                Colors.white,
+                Colors.lightGreenAccent,
+              ],
             ),
-            child: SingleChildScrollView(
-              child: Column(
-                children: const [
-                  LogoWidget(),
-                  SizedBox(height: 100),
-                  MyCustomFormWidget(),
-                ],
-              ),
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                LogoWidget(),
+                SizedBox(height: 100),
+                MyCustomFormWidget(),
+              ],
             ),
           ),
         ),

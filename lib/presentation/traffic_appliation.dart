@@ -7,9 +7,10 @@ class TrafficApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const SafeArea(
-        child: Scaffold(body: LoginScreen()),
+        child: LoginScreen(),
       ),
     );
   }
