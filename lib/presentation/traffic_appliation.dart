@@ -9,7 +9,7 @@ class TrafficApplication extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const SafeArea(
-        child: Scaffold(body: MainScreen()),
+        child: Scaffold(body: LoginScreen()),
       ),
     );
   }
