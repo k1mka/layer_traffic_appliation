@@ -7,10 +7,10 @@ class TrafficApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const SafeArea(child: Scaffold(body: MainScreen())));
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const SafeArea(
+        child: Scaffold(body: MainScreen()),
+      ),
+    );
   }
-  // TODO: Отобразить два виджета - Лого сверху, Форму ниже
 }
