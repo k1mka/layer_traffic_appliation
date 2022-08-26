@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:layer_traffic_appliation/widgets/button_widget.dart';
 
 class MyCustomFormWidget extends StatefulWidget {
   const MyCustomFormWidget({Key? key}) : super(key: key);
 
   @override
-  State<MyCustomFormWidget> createState() => _MyCustomFormWidgetState();
+  State<MyCustomFormWidget> createState() => MyCustomFormWidgetState();
 }
 
-class _MyCustomFormWidgetState extends State<MyCustomFormWidget> {
-  final fromKey = GlobalKey<FormState>();
+class MyCustomFormWidgetState extends State<MyCustomFormWidget> {
+  final formKey = GlobalKey<FormState>();
   String name = '';
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 40, right: 40),
       child: Form(
-        key: fromKey,
+        key: formKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -84,22 +86,12 @@ class _MyCustomFormWidgetState extends State<MyCustomFormWidget> {
               },
             ),
             const SizedBox(
-              height: 4,
+              height: 6,
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(12.0),
-                primary: Colors.green,
-              ),
-              onPressed: () {
-                if (fromKey.currentState!.validate()) {}
-              },
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
+            Center(
+              child: ButtonWidget(onPressed: () {
+                if (formKey.currentState!.validate()) {}
+              }),
             ),
           ],
         ),
